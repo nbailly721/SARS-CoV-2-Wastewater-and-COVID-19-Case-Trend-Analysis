@@ -63,12 +63,6 @@ Combined normalized trend graph comparing COVID-19 case rates and wastewater vir
 
 wastewater_covid_analysis.R: R script for importing, cleaning, filtering, normalizing, and visualizing the datasets.
 
-cases.xlsx: COVID-19 case data file.
-
-surveillance.xlsx: Daily wastewater SARS-CoV-2 data file.
-
-aggregate.csv: Weekly provincial wastewater dataset (filtered for city-level analysis).
-
 ##🧠 Notes
 
 Wastewater viral concentrations are standardized and log-transformed at the site level, and should be interpreted as relative indices, not raw viral copies per mL.
