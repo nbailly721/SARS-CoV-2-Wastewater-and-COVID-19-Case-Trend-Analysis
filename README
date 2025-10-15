@@ -1,0 +1,78 @@
+                                                  ######COVID-19 Wastewater Surveillance and Case Trend Analysis in Toronto######
+-This project processes and visualizes SARS-CoV-2 wastewater concentration data and COVID-19 case counts for the Toronto region. 
+The analysis uses R to clean, standardize, and visualize weekly and daily trends in 2024, enabling comparison between wastewater viral
+signals and reported infection rates.
+
+##🖥️ Workflow Overview
+
+Data Import and Cleaning (R Script)
+
+Load raw datasets: COVID-19 weekly case counts, daily wastewater concentration, and weekly aggregated wastewater data.
+
+Standardize date formats across datasets.
+
+Filter datasets to include only 2024 records and relevant geographic areas (Toronto and the Greater Toronto Area).
+
+Select relevant columns and remove missing values to ensure clean, consistent datasets for downstream analysis.
+
+Data Visualization and Trend Comparison (R Script)
+
+Generate individual line plots for:
+
+Daily SARS-CoV-2 concentration in the GTA.
+
+Weekly SARS-CoV-2 concentration in Toronto.
+
+Weekly COVID-19 case rates in Toronto.
+
+Normalize and combine wastewater and case data to visualize co-trends over time.
+
+Plot both metrics on the same graph to explore temporal associations.
+
+##📁 Dataset
+
+cases.xlsx: Weekly COVID-19 case counts in Toronto (source: https://www.publichealthontario.ca/en/Data-and-Analysis/Infectious-Disease/Respiratory-Virus-Tool).
+
+surveillance.xlsx: Daily SARS-CoV-2 wastewater concentrations for the GTA (source: https://www.publichealthontario.ca/en/Data-and-Analysis/Infectious-Disease/COVID-19-Data-Surveillance/Wastewater).
+
+aggregate.csv: Weekly aggregated SARS-CoV-2 concentrations across Ontario (source: https://health-infobase.canada.ca/wastewater/).
+
+##🔧 Tools & Packages
+
+R Environment:
+
+Language: R
+
+Packages:
+
+tidyverse (data manipulation, plotting)
+
+readxl (Excel import)
+
+dplyr (data wrangling)
+
+##📊 Key Results
+
+Line plots of SARS-CoV-2 wastewater concentrations over time in both daily (GTA) and weekly (Toronto) formats.
+
+Line plot of weekly COVID-19 case rates in Toronto.
+
+Combined normalized trend graph comparing COVID-19 case rates and wastewater viral load in 2024.
+
+##📂 Files
+
+wastewater_covid_analysis.R: R script for importing, cleaning, filtering, normalizing, and visualizing the datasets.
+
+cases.xlsx: COVID-19 case data file.
+
+surveillance.xlsx: Daily wastewater SARS-CoV-2 data file.
+
+aggregate.csv: Weekly provincial wastewater dataset (filtered for city-level analysis).
+
+##🧠 Notes
+
+Wastewater viral concentrations are standardized and log-transformed at the site level, and should be interpreted as relative indices, not raw viral copies per mL.
+
+The combined trend plot uses min-max normalization to enable visual comparison between wastewater signals and case rates.
+
+This project focuses on Toronto (2024 only) to examine whether wastewater-based surveillance reflects reported COVID-19 case trends over time.
